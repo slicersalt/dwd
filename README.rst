@@ -93,7 +93,7 @@ iain@idc9.edu.
 Documentation
 ^^^^^^^^^^^^^
 
-The source code is located on github: https://github.com/idc9/diproperm
+The source code is located on github: https://github.com/idc9/dwd
 
 Testing
 ^^^^^^^
@@ -111,4 +111,4 @@ bug fixes, spelling errors, new features, etc.
 .. _Iain Carmichael: https://idc9.github.io/
 .. _Marron et al 2007: https://amstat.tandfonline.com/doi/abs/10.1198/016214507000001120?casa_token=9u7plrafGzkAAAAA:10_e1f_4dQmNusX2G_YsXgKCuhQWUG2CyKqOtq0Ukev092euOhQ7p51i44B1ZbMeOKI4FvUJl2bjYQ
 .. _Wang and Zou 2017: https://rss.onlinelibrary.wiley.com/doi/full/10.1111/rssb.12244
-.. _these example notebooks: https://github.com/idc9/diproperm/tree/master/doc/example_notebooks
+.. _these example notebooks: https://github.com/idc9/dwd/tree/master/doc/example_notebooks
