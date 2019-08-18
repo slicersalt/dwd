@@ -81,7 +81,7 @@ Example
 
 .. image:: doc/figures/kern_dwd.png
 
-For more example code see `these example notebooks`_.
+For more example code see `these example notebooks`_ (including the code to generate the above figures).
 
 Help and Support
 ================
