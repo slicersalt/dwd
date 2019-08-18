@@ -5,7 +5,7 @@ DWD
 
 Additional documentation, examples and code revisions are coming soon.
 For questions, issues or feature requests please reach out to Iain:
-iain@unc.edu.
+iain@cornell.edu.
 
 Overview
 ========
