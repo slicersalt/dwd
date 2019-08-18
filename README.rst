@@ -43,6 +43,7 @@ Example
 =======
 
 .. code:: python
+
     from sklearn.datasets import make_blobs, make_circles
     from dwd.dwd import DWD
     from dwd.gen_kern_dwd import KernGDWD
@@ -65,6 +66,7 @@ Example
 
 
 .. code:: python
+
     # sample some non-linear, toy data
     X, y = make_circles(n_samples=200, noise=0.2, factor=0.5, random_state=1)
 
