@@ -10,14 +10,14 @@ iain@cornell.edu.
 Overview
 ========
 
-This package implements Distance Weighted Discrimination (DWD). DWD For details see (`Marron et al 2007`_, `Wang and Zou 2017`_).
+This package implements Distance Weighted Discrimination (DWD). DWD For details see (`Marron et al 2007`_, `Wang and Zou 2018`_).
 
 
 The package currently implements:
 
 - Original DWD formulation solved with Second Order Cone Programming (SOCP) and solved using cvxpy.
 
-- Genralized DWD (gDWD) and kernel gDWD solved with the Majorization-Minimization algorithm presented in Wang and Zou, 2017.
+- Genralized DWD (gDWD) and kernel gDWD solved with the Majorization-Minimization algorithm presented in Wang and Zou, 2018.
 
 
 Marron, James Stephen, Michael J. Todd, and Jeongyoun Ahn. "Distance-weighted discrimination." Journal of the American Statistical Association 102, no. 480 (2007): 1267-1271.
@@ -88,7 +88,7 @@ Help and Support
 
 Additional documentation, examples and code revisions are coming soon.
 For questions, issues or feature requests please reach out to Iain:
-iain@idc9.edu.
+idc9@cornell.edu.
 
 Documentation
 ^^^^^^^^^^^^^
@@ -110,5 +110,5 @@ bug fixes, spelling errors, new features, etc.
 
 .. _Iain Carmichael: https://idc9.github.io/
 .. _Marron et al 2007: https://amstat.tandfonline.com/doi/abs/10.1198/016214507000001120?casa_token=9u7plrafGzkAAAAA:10_e1f_4dQmNusX2G_YsXgKCuhQWUG2CyKqOtq0Ukev092euOhQ7p51i44B1ZbMeOKI4FvUJl2bjYQ
-.. _Wang and Zou 2017: https://rss.onlinelibrary.wiley.com/doi/full/10.1111/rssb.12244
+.. _Wang and Zou 2018: https://rss.onlinelibrary.wiley.com/doi/full/10.1111/rssb.12244
 .. _these example notebooks: https://github.com/idc9/dwd/tree/master/doc/example_notebooks
