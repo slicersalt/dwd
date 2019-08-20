@@ -6,7 +6,7 @@ from sklearn.utils import check_X_y
 
 from dwd.utils import pm1
 from dwd.gen_dwd import V, V_grad
-from dwd.KernelClf import KernelClfMixin
+from dwd.kernel_utils import KernelClfMixin
 from dwd.cv import run_cv
 
 

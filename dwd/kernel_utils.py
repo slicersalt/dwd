@@ -3,6 +3,9 @@ from sklearn.metrics.pairwise import pairwise_kernels
 
 from sklearn.utils.extmath import safe_sparse_dot
 from sklearn.base import ClassifierMixin
+from sklearn.utils.validation import FLOAT_DTYPES
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.utils import check_array
 
 
 class KernelClfMixin(ClassifierMixin):
@@ -89,3 +92,57 @@ class KernelClfMixin(ClassifierMixin):
         else:
             indices = scores.argmax(axis=1)
         return self.classes_[indices]
+
+
+class KernelScaler(BaseEstimator, TransformerMixin):
+    """Center a kernel matrix
+    Let K(x, z) be a kernel defined by phi(x)^T phi(z), where phi is a
+    function mapping x to a Hilbert space. KernelScaler scales (i.e.,
+    normalized to have zero norm) the data without explicitly computing phi(x).
+    It is equivalent to centering phi(x) with
+    sklearn.preprocessing.StandardScaler(with_mean=False).
+    Read more in the :ref:`User Guide <kernel_centering>`.
+    """
+
+    def __init__(self):
+        # Needed for backported inspect.signature compatibility with PyPy
+        pass
+
+    def fit(self, K, y=None):
+        """Fit KernelCenterer
+        Parameters
+        ----------
+        K : numpy array of shape [n_samples, n_samples]
+            Kernel matrix.
+        Returns
+        -------
+        self : returns an instance of self.
+        """
+        K = check_array(K, dtype=FLOAT_DTYPES)
+        self.K_diag_ = np.diag(K)
+        return self
+
+    def transform(self, K, copy=True):
+        """Center kernel matrix.
+        Parameters
+        ----------
+        K : numpy array of shape [n_samples1, n_samples2]
+            Kernel matrix.
+        copy : boolean, optional, default True
+            Set to False to perform inplace computation.
+        Returns
+        -------
+        K_new : numpy array of shape [n_samples1, n_samples2]
+        """
+        # check_is_fitted(self, 'K_diag_')
+
+        K = check_array(K, copy=copy, dtype=FLOAT_DTYPES)
+
+        n = len(self.K_diag_)
+        s = 1.0 / np.sqrt(self.K_diag_ / n)
+
+        return np.multiply(np.multiply(s, K), s)
+
+    @property
+    def _pairwise(self):
+        return True
