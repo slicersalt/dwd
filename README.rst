@@ -5,7 +5,7 @@ DWD
 
 Additional documentation, examples and code revisions are coming soon.
 For questions, issues or feature requests please reach out to Iain:
-iain@cornell.edu.
+idc9@cornell.edu.
 
 Overview
 ========
@@ -81,7 +81,7 @@ Example
 
 .. image:: doc/figures/kern_dwd.png
 
-For more example code see `these example notebooks`_ (including the code to generate the above figures).
+For more example code see `these example notebooks`_ (including the code to generate the above figures). If the notebooks aren't loading on github you can copy/paste the notebook url into https://nbviewer.jupyter.org/.
 
 Help and Support
 ================
