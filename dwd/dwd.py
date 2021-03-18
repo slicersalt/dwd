@@ -2,11 +2,11 @@ import cvxpy as cp
 import numpy as np
 
 from sklearn.base import BaseEstimator
-from sklearn.linear_model.base import LinearClassifierMixin
 from sklearn.utils import check_X_y
 from sklearn.metrics.pairwise import euclidean_distances
 
 from dwd.utils import pm1
+from dwd.linear_model import LinearClassifierMixin
 
 
 class DWD(BaseEstimator, LinearClassifierMixin):

@@ -1,5 +1,5 @@
 from sklearn.base import clone
-from sklearn.metrics.scorer import check_scoring
+from sklearn.metrics import check_scoring
 from sklearn.utils import check_X_y
 from sklearn.model_selection import check_cv
 from time import time

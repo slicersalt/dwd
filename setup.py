@@ -4,7 +4,7 @@ install_requires = ['numpy', 'cvxpy', 'sklearn', 'matplotlib']
 
 setup(
       name='dwd',
-      version='1.0.0',
+      version='1.0.1',
       author='Iain Carmichael',
       author_email='idc9@cornell.edu',
       maintainer='Kitware Medical',

@@ -2,11 +2,11 @@ import numpy as np
 from copy import deepcopy
 
 from sklearn.base import BaseEstimator
-from sklearn.linear_model.base import LinearClassifierMixin
 from sklearn.utils import check_X_y
 
 from dwd.utils import pm1
 from dwd.cv import run_cv
+from dwd.linear_model import LinearClassifierMixin
 
 
 class GenDWD(BaseEstimator, LinearClassifierMixin):

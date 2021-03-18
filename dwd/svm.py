@@ -2,7 +2,8 @@ import cvxpy as cp
 import numpy as np
 
 from sklearn.base import BaseEstimator  # , TransformerMixin, ClassifierMixin
-from sklearn.linear_model.base import LinearClassifierMixin
+
+from dwd.linear_model import LinearClassifierMixin
 
 
 def solve_svm(X, y, C, sample_weight=None, solver_kws={}):
