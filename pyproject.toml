@@ -9,7 +9,7 @@ author-email="dc9@cornell.edu"
 maintainer="Kitware Medical"
 maintainer-email="david.allemang@kitware.com"
 home-page = "https://github.com/slicersalt/dwd"
-description-file = "README.rst"
+description-file = "README.md"
 requires-python=">=3.6"
 requires = [
     "numpy",
