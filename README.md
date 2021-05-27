@@ -31,6 +31,8 @@ tested in python 3.6.
 $ pip install dwd
 ```
 
+[Flit](https://github.com/takluyver/flit) is used for packaging, and all package metadata is stored in `pyproject.toml`. To install this project locally or for development, use `flit install` or build a pip-installable wheel with `flit build`.
+
 # Example
 
 ```python

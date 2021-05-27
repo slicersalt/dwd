@@ -14,7 +14,7 @@ requires-python=">=3.6"
 requires = [
     "numpy",
     "cvxpy",
-    "sklearn",
+    "scikit-learn",
     "matplotlib"
 ]
 classifiers = [
