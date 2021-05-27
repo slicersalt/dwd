@@ -25,7 +25,7 @@ class LinearClassifierMixin(ClassifierMixin):
         check_is_fitted(self)
 
         X = check_array(X, accept_sparse=['csr', 'csc', 'coo'])
-        return safe_sparse_dot(X, self.coef_.T, dense_output=True) + self.intercept_
+        return safe_sparse_dot(X, self.coef_.T, dense_output=True).flatten() + self.intercept_
 
     def predict(self, X):
         scores = self.decision_function(X)

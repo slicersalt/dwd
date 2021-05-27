@@ -1,6 +1,7 @@
 # Updates
 
 - Convert `README.rst` to markdown to be more consistent other documentation.
+- Reverted changes to `solve_dwd_socp` to make it [DPP-compliant](https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming), as it caused DWD to stall in new versions of cvxpy.
 
 ## 2021.05.17 (version 1.0.1)
 
