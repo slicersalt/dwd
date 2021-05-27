@@ -116,7 +116,6 @@ def solve_dwd_socp(X, y, C=1.0, sample_weight=None, solver_kws={}):
 
     # optimization variables
     beta = cp.Variable(shape=n_features)
-    X_beta = cp.Variable(shape=n_samples)  # to prevent `Y_tilde @ X @ beta` breaking DPP
     intercept = cp.Variable()
     eta = cp.Variable(shape=n_samples, nonneg=True)
 
@@ -135,9 +134,8 @@ def solve_dwd_socp(X, y, C=1.0, sample_weight=None, solver_kws={}):
     # setup constraints
     # TODO: do we need explicit SOCP constraints?
     Y_tilde = cp.diag(y)  # TODO: make sparse
-    constraints = [rho - sigma == Y_tilde @ X_beta + intercept * y + eta,
-                   cp.SOC(cp.Parameter(value=1), beta),
-                   X_beta == X @ beta]  # ||beta||_2^2 <= 1
+    constraints = [rho - sigma == Y_tilde @ X @ beta + intercept * y + eta,
+                   cp.SOC(cp.Parameter(value=1), beta)]  # ||beta||_2^2 <= 1
 
     # rho^2 - sigma^2 >= 1
     constraints.extend([cp.SOC(rho[i], cp.vstack([sigma[i], 1]))
