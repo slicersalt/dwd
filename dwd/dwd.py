@@ -10,8 +10,17 @@ from dwd.linear_model import LinearClassifierMixin
 
 
 class DWD(BaseEstimator, LinearClassifierMixin):
+    def __init__(self, C=1.0, solver_kws=None):
+        """
+        Parameters
+        ----------
 
-    def __init__(self, C=1.0, solver_kws={}):
+        C : Union[float, 'auto']
+            Penalty term.
+        """
+        if solver_kws is None:
+            solver_kws = {}
+
         self.C = C
         self.solver_kws = solver_kws
 
