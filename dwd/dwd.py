@@ -63,6 +63,30 @@ class DWD(BaseEstimator, LinearClassifierMixin):
 
         return self
 
+    @property
+    def direction(self):
+        """
+        The separating hyperplane is of the form 'p.d = d.i', where '.' is the dot
+        product. If 'p.d < d.i', then 'p' is classified label 0. If 'p.d > d.i' then it
+        is classified label 1.
+
+        Returns
+        -------
+        direction: np.ndarray
+            The DWD separating direction; normal to the hyperplane.
+
+        intercept: float
+            The intercept of the separating hyperplane.
+
+        the DWD direction and intercept. The separating hyperplane is of the
+        form 'p.d = d.i', where '.' is the dot product. If 'p.d < d.i', then 'p' is label
+        0. If 'p.d > d.i', then 'p' is label 1.
+        """
+
+        direction = self.coef_.reshape(-1)
+        intercept = -float(self.intercept_)
+        return direction, intercept
+
 
 def solve_dwd_socp(X, y, C=1.0, sample_weight=None, solver_kws={}):
     """
