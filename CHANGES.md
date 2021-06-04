@@ -1,5 +1,10 @@
 # Updates
 
+## Upcoming
+
+- Add sphinx documentation for Read the Docs
+- Fix pyproject.toml to match [PEP 621](https://www.python.org/dev/peps/pep-0621/)
+
 ## 1.0.2 (2021-05-28)
 
 - Convert `README.rst` to markdown to be more consistent other documentation.

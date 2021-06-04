@@ -2,21 +2,23 @@
 requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
-[tool.flit.metadata]
-module = "dwd"
-author="Iain Carmichael"
-author-email="dc9@cornell.edu"
-maintainer="Kitware Medical"
-maintainer-email="david.allemang@kitware.com"
-home-page = "https://github.com/slicersalt/dwd"
-description-file = "README.md"
-requires-python=">=3.6"
-requires = [
+[project]
+name = "dwd"
+authors = [
+    {name = 'Iain Carmichael', email = 'idc9@cornell.edu'},
+    {name = 'David Allemang', email = 'david.allemang@kitware.com'},
+]
+maintainers = [
+    {name = 'Kitware Medical', email = 'david.allemang@kitware.com'}
+]
+dependencies = [
     "numpy",
     "cvxpy",
     "scikit-learn",
     "matplotlib"
 ]
+requires-python=">=3.6"
+readme = 'README.md'
 classifiers = [
     "License :: OSI Approved :: MIT License",
 
@@ -34,3 +36,14 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Medical Science Apps.",
     "Topic :: Scientific/Engineering :: Information Analysis",
 ]
+dynamic = ['version', 'description']
+
+[project.optional-dependencies]
+test = []
+doc = [
+    'sphinx',
+    'sphinx-rtd-theme',
+]
+
+[project.urls]
+Source = 'https://github.com/slicersalt/dwd'

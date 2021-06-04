@@ -40,3 +40,5 @@ pip-delete-this-directory.txt
 .Rhistory
 /dep/
 /iain_only/
+
+/docs/_build
