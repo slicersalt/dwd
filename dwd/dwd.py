@@ -76,18 +76,16 @@ def solve_dwd_socp(X, y, C=1.0, sample_weight=None, solver_kws={}):
     solver_kws: dict
         Keyword arguments to cp.solve
 
-    Output
+    Returns
     ------
-    beta, intercept, eta, d, problem
-
     beta: (n_features, )
         DWD normal vector.
 
     intercept: float
         DWD intercept.
 
-    eta, d:
-        optimization variables.
+    eta, d: float
+        Optimization variables.
 
     problem: cp.Problem
 

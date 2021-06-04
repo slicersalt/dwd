@@ -28,14 +28,14 @@ class KernGDWD(BaseEstimator, KernelClfMixin):
     q: float
         Tuning parameter for generalized DWD (the exponent on the margin terms). When q = 1, gDWD is equivalent to DWD.
 
-    kernel: str, callable(X, Y, **kwargs)
+    kernel: str, callable(X, Y, \*\*kwargs)
         The kernel to use.
 
     kernel_kws: dict
         Any key word arguments for the kernel.
 
     implicit_P: bool
-        Whether to use the implicit P^{-1} gamma formulation (in the publication) or the explicit computation (in the arxiv version).
+        Whether to use the implicit P\^\{-1\} gamma formulation (in the publication) or the explicit computation (in the arxiv version).
     """
 
     def __init__(self, lambd=1.0, q=1.0, kernel='linear',
