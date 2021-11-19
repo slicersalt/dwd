@@ -3,6 +3,7 @@
 ## Upcoming
 
 - Rolled back dependency version pinning to restore compatibility with other versions of Python.
+- Remove matplotlib main dependency
 
 ## 1.0.3 (2021-11-19)
 

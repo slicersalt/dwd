@@ -14,8 +14,7 @@ maintainers = [
 dependencies = [
     "numpy",
     "cvxpy",
-    "scikit-learn",
-    "matplotlib"
+    "scikit-learn"
 ]
 requires-python=">=3.6"
 readme = 'README.md'
