@@ -1,6 +1,6 @@
 # Updates
 
-## Upcoming
+## 1.0.3 (2021-11-19)
 
 - Add sphinx documentation for Read the Docs
 - Fix pyproject.toml to match [PEP 621](https://www.python.org/dev/peps/pep-0621/)

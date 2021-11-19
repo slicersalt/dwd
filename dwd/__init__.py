@@ -1,6 +1,6 @@
 """Distance Weighted Discrimination for Python"""
 
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 
 from .dwd import DWD
 from .gen_dwd import GenDWD, GenDWDCV
