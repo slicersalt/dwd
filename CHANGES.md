@@ -1,9 +1,10 @@
 # Updates
 
-## 1.0.3 (2021-11-19)
+## Upcoming
 
 - Add sphinx documentation for Read the Docs
 - Fix pyproject.toml to match [PEP 621](https://www.python.org/dev/peps/pep-0621/)
+- Pin dependency versions to support `pip install --require-hashes`
 - Add property dwd.direction
 - Pin dependency versions to support `pip install --require-hashes`
 

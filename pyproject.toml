@@ -12,10 +12,10 @@ maintainers = [
     {name = 'Kitware Medical', email = 'david.allemang@kitware.com'}
 ]
 dependencies = [
-    "numpy",
-    "cvxpy",
-    "scikit-learn",
-    "matplotlib"
+    "numpy==1.20.3",
+    "cvxpy==1.1.13",
+    "scikit-learn==0.24.2",
+    "matplotlib==3.4.2"
 ]
 requires-python=">=3.6"
 readme = 'README.md'
