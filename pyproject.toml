@@ -13,8 +13,7 @@ maintainers = [
 ]
 dependencies = [
     "numpy",
-    "cvxpy",
-    "scikit-learn"
+    "scikit-learn",
 ]
 requires-python=">=3.6"
 readme = 'README.md'
@@ -38,6 +37,9 @@ classifiers = [
 dynamic = ['version', 'description']
 
 [project.optional-dependencies]
+socp = [
+    "cvxpy",
+]
 test = []
 doc = [
     'sphinx',

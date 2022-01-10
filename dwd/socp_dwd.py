@@ -1,4 +1,5 @@
-import cvxpy as cp
+import logging
+
 import numpy as np
 
 from sklearn.base import BaseEstimator
@@ -8,6 +9,13 @@ from sklearn.metrics.pairwise import euclidean_distances
 from dwd.utils import pm1
 from dwd.linear_model import LinearClassifierMixin
 
+try:
+    import cvxpy as cp
+except ImportError:
+    logging.warn(
+        'cvxpy is not installed, but is required for the conic solver.'
+    )
+    raise
 
 class DWD(BaseEstimator, LinearClassifierMixin):
     def __init__(self, C=1.0, solver_kws=None):
