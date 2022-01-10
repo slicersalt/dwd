@@ -1,17 +1,17 @@
 DWD Classifiers
 ===============
 
-.. autoclass:: dwd.DWD
+.. autoclass:: dwd.socp_dwd.DWD
    :members: fit
    :inherited-members: predict, decision_function, score
 
-.. autoclass:: dwd.GenDWD
+.. autoclass:: dwd.gen_dwd.GenDWD
 
-.. autoclass:: dwd.KernGDWD
+.. autoclass:: dwd.gen_kern_dwd.KernGDWD
 
 Cross-validation
 ----------------
 
-.. autoclass:: dwd.GenDWDCV
+.. autoclass:: dwd.gen_dwd.GenDWDCV
 
-.. autoclass:: dwd.KernGDWDCV
+.. autoclass:: dwd.gen_kern_dwd.KernGDWDCV

@@ -1,5 +1,13 @@
 # Updates
 
+## 1.0.5 (2022-01-10)
+
+- Since `cvxpy` is not supported on all platforms, make this an optional dependency installable via `pip install dwd[socp]`. 
+- Remove the import aliases from `dwd.__init__`; one must explictly import the solver to be used:
+  - `dwd.socp_dwd.DWD` (only in `dwd[socp]`)
+  - `dwd.gen_dwd.GenDWD`
+  - `dwd.gen_kern_dwd.KernGDWD`
+
 ## 1.0.4 (2021-11-19)
 
 - Rolled back dependency version pinning to restore compatibility with other versions of Python.

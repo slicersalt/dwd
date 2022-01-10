@@ -31,42 +31,51 @@ tested in python 3.6.
 $ pip install dwd
 ```
 
-[Flit](https://github.com/takluyver/flit) is used for packaging, and all package metadata is stored in `pyproject.toml`. To install this project locally or for development, use `flit install` or build a pip-installable wheel with `flit build`.
+The conic solver `socp_dwd.DWD` depends on `cvxpy`, which is not available on all platforms. See [the `cvxpy` installation instructions][cvxpy]. If `cvxpy` dependencies are met, then use `pip install dwd[socp]`. 
+
+[Flit][flit] is used for packaging, and all package metadata is stored in `pyproject.toml`. To install this project locally or for development, use `flit install` or build a pip-installable wheel with `flit build`.
+
+[cvxpy]: https://www.cvxpy.org/install/index.html
+[flit]: https://github.com/takluyver/flit
 
 # Example
 
 ```python
-  from sklearn.datasets import make_blobs, make_circles
-  from dwd import DWD, KernGDWD
+from sklearn.datasets import make_blobs
+from dwd.socp_dwd import DWD
 
-  # sample sythetic training data
-  X, y = make_blobs(n_samples=200, n_features=2,
-                    centers=[[0, 0],
-                             [2, 2]])
+# sample sythetic training data
+X, y = make_blobs(
+    n_samples=200,
+    n_features=2,
+    centers=[[0, 0],
+             [2, 2]],
+)
 
-  # fit DWD classifier
-  dwd = DWD(C='auto').fit(X, y)
+# fit DWD classifier
+dwd = DWD(C='auto').fit(X, y)
 
-  # compute training accuracy
-  dwd.score(X, y)
-
-  0.94
+# compute training accuracy
+dwd.score(X, y)  # 0.94
 ```
 
 ![dwd_sep_hyperplane][dwd_sep_hyperplane]
 
 ```python
+from sklearn.datasets import make_circles
+from dwd.gen_kern_dwd import KernGDWD
+
 # sample some non-linear, toy data
 X, y = make_circles(n_samples=200, noise=0.2, factor=0.5, random_state=1)
 
 # fit kernel DWD wit gaussian kernel
-kdwd = KernGDWD(lambd=.1, kernel='rbf',
-                kernel_kws={'gamma': 1}).fit(X, y)
+kdwd = KernGDWD(
+    lambd=.1, kernel='rbf',
+    kernel_kws={'gamma': 1},
+).fit(X, y)
 
 # compute training accuracy
-kdwd.score(X, y)
-
-0.915
+kdwd.score(X, y)  # 0.915
 ```
 
 ![kern_dwd][kern_dwd]
