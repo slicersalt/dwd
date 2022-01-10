@@ -7,6 +7,7 @@
   - `dwd.socp_dwd.DWD` (only in `dwd[socp]`)
   - `dwd.gen_dwd.GenDWD`
   - `dwd.gen_kern_dwd.KernGDWD`
+- Add `socp` requirements to readthedocs config so `dwd.socp_dwd` autodoc will generate.
 
 ## 1.0.4 (2021-11-19)
 
